@@ -292,7 +292,6 @@ export default {
       const link = document.createElement('a')
       const evt = document.createEvent('HTMLEvents')
       evt.initEvent('click', false, false)
-      // link.href = 'http://192.168.149.9:5000/v1/openvpn/download?openvpn_user_info=openvpn'
       link.href = `${Config.baseURL}/v1/openvpn/download?openvpn_user_info=${val.row.username}`
       link.download = val.row.username
       link.target = '_blank'
