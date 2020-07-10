@@ -34,7 +34,9 @@ module.exports = {
       },
     },
   },
-  devServer: {},
+  devServer: {
+    port: 8000 //端口
+  },
   // node_modules依赖项es6语法未转换问题
   transpileDependencies: [
     'vuex-persist',

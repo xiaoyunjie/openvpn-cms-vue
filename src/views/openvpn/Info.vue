@@ -269,9 +269,9 @@ export default {
                         }
                         .version {
                             /*display: inline;*/
-                            margin-top: 12px;
+                            margin-top: 16px;
                             height: 48px;
-                            font-size: 16px;
+                            font-size: 14px;
                             color: rgba(45, 109, 165, 1);
                             /*line-height: 38px;*/
                             /*letter-spacing: 2px;*/
