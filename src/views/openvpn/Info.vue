@@ -75,7 +75,7 @@ export default {
         { prop: 'local_ip', label: '虚拟IP', width: 150 },
         { prop: 'bytes_sent', label: '发送字节', scope: 'bytes_sent', customRender(row, column) { return Vue.filter('filterbytesToSize')(column) } },
         { prop: 'bytes_recv', label: '接受字节', scope: 'bytes_recv', customRender(row, column) { return Vue.filter('filterbytesToSize')(column) } },
-        { prop: 'connected_since', label: '在线时间', scope: 'connected_since', customRender(row, column) { return Vue.filter('filterTimeInterval')(column) }, width: 180 },
+        { prop: 'connected_since', label: '在线时间', scope: 'connected_since', customRender(row, column) { return Vue.filter('filterTimeInterval')(column) }, width: 150 },
         { prop: 'location', label: '位置标识' },
         { prop: 'country', label: '国家' },
         { prop: 'longitude', label: '经度' },
