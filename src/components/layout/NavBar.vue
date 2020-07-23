@@ -2,8 +2,6 @@
   <div class="app-nav-bar">
     <div class="nav-content">
       <breadcrumb />
-<!--      <a class="tips" href="https://fdoc.epoint.com.cn:3366/openvpn" target="_blank">OPENVPN使用说明和客户端下载地址</a>-->
-      <!-- 暂时放这里 -->
       <div class="right-info">
         <notify v-auth="'消息推送'" v-show="false" />
         <clear-tab></clear-tab>
