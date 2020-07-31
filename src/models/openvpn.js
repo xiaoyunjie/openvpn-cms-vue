@@ -97,9 +97,9 @@ class OpenVPN {
   // }
 
   // 历史信息搜索
-  async searchkeyworkinfo({ count = this.uCount, page = this.uPage, name, keyword, start, end }) {
+  async searchkeyworkinfo({ count = this.uCount, page = this.uPage, username, keyword, start, end }) {
     try {
-      const res = await get('v1/openvpn/infosearch', { count, page, name, keyword, start, end }, { handleError: true })
+      const res = await get('v1/openvpn/infosearch', { count, page, username, keyword, start, end }, { handleError: true })
       return res
     } catch (error) {
       console.log(error)

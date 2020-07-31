@@ -212,11 +212,11 @@ export default {
         this.loading = true
         this.finished = false
         // const username = this.searchUser === '全部人员' ? '' : this.searchUser
-        const name = this.searchUser
+        const username = this.searchUser
         res = await OpenVPN.searchkeyworkinfo({
           // page: 0, // 初始化
           keyword: this.searchKeyword,
-          name,
+          username,
           start: this.searchDate[0],
           end: this.searchDate[1],
         })
