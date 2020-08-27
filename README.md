@@ -36,8 +36,8 @@ source /etc/profile
 
 #### 修改配置文件 index.js
 ```bash 
-vi src/config/stage/index.js
-baseURL: 'http://localhost:5000'
+vi src/config/index.js
+baseURL: 'http://IP:5000'   ## 地址改成本机IP
 ```
 
 #### 启动
