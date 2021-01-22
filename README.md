@@ -48,4 +48,41 @@ baseURL: 'http://IP:5000'   ## 地址改成本机IP，不要使用环回口或lo
 http://localhost:8000
 
 
+### 发布
+vue项目无需每次都 `npm run serve`，只需要打包成html页面，静态发布就行。
+
+```bash
+npm run build   ## 打包
+```
+打包完成后，会在当前目录下生成一个dist目录，里面就是静态文件，将文件放到指定目录下，并用nginx代理。
+
+```bash
+yum install nginx -y    ## 安装nginx
+mkdir -p /www           ## 创建发布目录
+cp -r dist/*  /www      ## 拷贝静态文件到发布目录
+systemctl start nginx   ## 启动nginx
+systemctl enable nginx  ## 开机启动nginx
+```
+
+nignx 配置
+```bash
+http {
+    server {
+        listen       80 default_server;
+        server_name  _;
+        root    /www;   
+        
+        location / {
+        }
+        error_page 404 /404.html;
+            location = /40x.html {
+        }
+        error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
+        }
+    }
+}
+```
+
+
 ## 如果此系统对你有所帮助，请Start一波！！
