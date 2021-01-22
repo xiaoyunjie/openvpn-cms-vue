@@ -37,7 +37,7 @@ source /etc/profile
 #### 修改配置文件 index.js
 ```bash 
 vi src/config/index.js
-baseURL: 'http://IP:5000'   ## 地址改成本机IP
+baseURL: 'http://IP:5000'   ## 地址改成本机IP，不要使用环回口或localhost
 ```
 
 #### 启动
