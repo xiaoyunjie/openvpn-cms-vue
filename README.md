@@ -1,6 +1,8 @@
-### openvpn-cms-vue
+# openvpn-cms-vue
 
-[后端传送门](https://github.com/xiaoyunjie/openvpn-cms-flask)
+### （如果此系统对你有所帮助，请Start一波！！）
+
+[后端系统传送门](https://github.com/xiaoyunjie/openvpn-cms-flask)
 
 >基于Lin-cms-vue 二次开发的openvpn-cms-vue，是openvpn-cms的前端，后端是openvpn-cms-flask
 
@@ -86,3 +88,6 @@ http {
 
 
 ## 如果此系统对你有所帮助，请Start一波！！
+
+## 欢迎交流
+QQ：2913381648
