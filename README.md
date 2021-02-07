@@ -20,7 +20,7 @@ VPN历史信息
 - Node.js（version：8.11.0+）
 - npm 
 
-`git clone https://github.com/xiaoyunjie/openvpn-cms-vue.git`
+`git clone https://github.com/xiaoyunjie/openvpn-cms-vue.git  openvpn-cms-vue`
 
 `yum install -y npm`
 
