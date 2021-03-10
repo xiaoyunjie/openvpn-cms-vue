@@ -20,19 +20,21 @@ VPN历史信息
 - Node.js（version：8.11.0+）
 - npm 
 
-`git clone https://github.com/xiaoyunjie/openvpn-cms-vue.git  openvpn-cms-vue`
+克隆代码：`git clone https://github.com/xiaoyunjie/openvpn-cms-vue.git  openvpn-cms-vue`
 
-`yum install -y npm`
+安装npm：`yum install -y npm`
 
-`npm install -g n`
+更新npm到5.6.0：`npm install -g npm`
 
-`sudo n 8.11.3`
+切换node版本：`sudo n 8.11.3`
+
+安装：`npm install`
 
 更新node后，版本没有发生变化，原因是环境变量没有设置
 
 ```bash
 echo "export N_PREFIX=/usr/local/bin" >> /etc/profile
-echo "export PATH=$N_PREFIX/bin:$PATH" >> /etc/profile
+echo "export PATH=\$N_PREFIX/bin:\$PATH" >> /etc/profile
 source /etc/profile
 ```
 
