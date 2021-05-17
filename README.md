@@ -24,7 +24,7 @@ VPN历史信息
 
 安装npm：`yum install -y npm`
 
-更新npm到5.6.0：`npm install -g npm`
+更新npm到5.6.0：`npm i -g n`
 
 切换node版本：`sudo n 8.11.3`
 
