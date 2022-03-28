@@ -26,17 +26,18 @@ VPN历史信息
 
 更新npm到5.6.0：`npm i -g n`
 
-切换node版本：`sudo n 8.11.3`
-
-安装：`npm install`
-
 更新node后，版本没有发生变化，原因是环境变量没有设置
-
 ```bash
-echo "export N_PREFIX=/usr/local/bin" >> /etc/profile
+echo "export N_PREFIX=/usr/local" >> /etc/profile
 echo "export PATH=\$N_PREFIX/bin:\$PATH" >> /etc/profile
 source /etc/profile
+mkdir -p /usr/local/n
 ```
+
+切换node版本：`sudo n 8.11.3`
+
+安装：`cd /opt/openvpn-cms-vue && npm install`
+
 
 #### 修改配置文件 index.js
 ```bash 
