@@ -135,7 +135,7 @@ export default {
       { name: 'IP查询', func: 'handlesearchip', type: 'primary' },
       { name: 'MAC更新', func: 'handleupdate', type: 'primary' },
       { name: '证书下载', func: 'certdownload', type: 'primary' },
-      { name: '删除', func: 'handleDelete', type: 'danger', auth: '删除用户' },
+      { name: '删除', func: 'handleDelete', type: 'danger', auth: '注销openvpn账号' },
     ]
     this.loading = false
   },
