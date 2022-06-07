@@ -48,7 +48,7 @@
     "child_process": "^1.0.2",
     "cz-conventional-changelog": "^2.1.0",
     "directory-tree": "^2.2.3",
-    "ejs": "^3.1.7",
+    "ejs": "^2.6.2",
     "eslint": "^6.0.1",
     "eslint-plugin-vue": "^5.2.3",
     "fs-extra": "^8.1.0",
