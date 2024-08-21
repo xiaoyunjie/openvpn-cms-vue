@@ -1,7 +1,5 @@
 # openvpn-cms-vue
 
-### （如果此系统对你有所帮助，请Start一波！！）
-
 [后端系统传送门](https://github.com/xiaoyunjie/openvpn-cms-flask)
 
 >基于Lin-cms-vue 二次开发的openvpn-cms-vue，是openvpn-cms的前端，后端是openvpn-cms-flask
@@ -16,7 +14,9 @@ VPN历史信息
 ![images](images/openvpn-3.png)
 
 
-### 安装部署
+## 安装部署
+
+### 手动编译
 - Node.js（version：8.11.0+）
 - npm (version: 5.6.0) 
 
@@ -32,39 +32,28 @@ echo "export N_PREFIX=/usr/local" >> /etc/profile
 echo "export PATH=\$N_PREFIX/bin:\$PATH" >> /etc/profile
 source /etc/profile
 mkdir -p /usr/local/n
+# 切换node版本
+sudo n 8.11.3
+# 安装依赖
+cd /opt/openvpn-cms-vue && npm install
+# 测试运行 http://localhost:8000
+npm run serve
+# 编译
+npm run build
 ```
-
-切换node版本：`sudo n 8.11.3`
-
-安装：`cd /opt/openvpn-cms-vue && npm install`
-
-
-#### 修改配置文件 index.js
-```bash 
-vi src/config/index.js
-baseURL: 'http://IP:5000'   ## 地址改成本机IP，不要使用环回口或localhost
-```
-
-#### 启动
-`npm install`
-
-`npm run serve`
-
-http://localhost:8000
 
 
 ### 发布
 vue项目无需每次都 `npm run serve`，只需要打包成html页面，静态发布就行。
 
-```bash
-npm run build   ## 打包
-```
 打包完成后，会在当前目录下生成一个dist目录，里面就是静态文件，将文件放到指定目录下，并用nginx代理。
+
+或者直接从release中获取部署包进行部署。
 
 ```bash
 yum install nginx -y    ## 安装nginx
 mkdir -p /www           ## 创建发布目录
-cp -r dist/*  /www      ## 拷贝静态文件到发布目录
+cp -r dist  /www/      ## 拷贝静态文件到发布目录
 systemctl start nginx   ## 启动nginx
 systemctl enable nginx  ## 开机启动nginx
 ```
@@ -73,12 +62,17 @@ nignx 配置
 ```bash
 http {
     server {
-        listen       80 default_server;
-        server_name  _;
-        root    /www;   
-        
+        listen       8000;
+    
         location / {
+            alias /www/dist/;
+            index  index.html index.htm;
+            try_files $uri $uri/ /index.html;
         }
+        location ~^/(cms|v1) {
+            proxy_pass http://127.0.0.1:5000;
+        }
+    
         error_page 404 /404.html;
             location = /40x.html {
         }
@@ -90,7 +84,4 @@ http {
 ```
 
 
-## 如果此系统对你有所帮助，请Start一波！！
-
-## 欢迎交流
-QQ：2913381648
+> 如果此系统对你有所帮助，请Start一波！！
