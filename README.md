@@ -83,5 +83,15 @@ http {
 }
 ```
 
+### docker 部署
+
+```bash
+docker run -d --rm --name=openvpn-cms-vue \
+    -v ./service/nginx/logs:/var/log/nginx \
+    -v ./openvpn-cms-vue.conf:/etc/nginx/conf.d/openvpn-cms-vue.conf \
+    registry.cn-hangzhou.aliyuncs.com/browser/openvpn-cms-vue:v1.0.1
+```
+
+如果启动失败，请先把后端启动起来
 
 > 如果此系统对你有所帮助，请Start一波！！
