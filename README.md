@@ -87,9 +87,10 @@ http {
 
 ```bash
 docker run -d --rm --name=openvpn-cms-vue \
+    -p 8000:8000 \
     -v ./service/nginx/logs:/var/log/nginx \
     -v ./openvpn-cms-vue.conf:/etc/nginx/conf.d/openvpn-cms-vue.conf \
-    registry.cn-hangzhou.aliyuncs.com/browser/openvpn-cms-vue:v1.0.1
+    registry.cn-hangzhou.aliyuncs.com/browser/openvpn-cms-vue:v1.1.0
 ```
 
 如果启动失败，请先把后端启动起来
