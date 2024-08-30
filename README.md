@@ -93,6 +93,6 @@ docker run -d --rm --name=openvpn-cms-vue \
     registry.cn-hangzhou.aliyuncs.com/browser/openvpn-cms-vue:v1.1.0
 ```
 
-如果启动失败，请先把后端启动起来
+如果启动失败，请先把后端启动起来，openvpn-cms-vue.conf proxy_pass 地址改成本机IP
 
 > 如果此系统对你有所帮助，请Start一波！！
