@@ -14,17 +14,17 @@
                      @submit.native.prevent
                     >
                         <el-form-item label="用户名" prop="username">
-                            <el-input size="small" v-model="form.username" placeholder="请填写注册用户名"></el-input>
+                            <el-input size="small" v-model="form.username" placeholder="请填写注册用户名,长度4~22,包含字符,数字和下划线"></el-input>
                         </el-form-item>
                         <el-form-item label="姓名" prop="nickname">
-                            <el-input size="small" v-model="form.nickname" placeholder="请填用户真实姓名"></el-input>
+                            <el-input size="small" v-model="form.nickname" placeholder="请填用户真实姓名,姓名长度不能超过20"></el-input>
                         </el-form-item>
                         <el-form-item label="简介" prop="summary">
                             <el-input
                                     size="small"
                                     type="textarea"
                                     :autosize="{ minRows: 4, maxRows: 8 }"
-                                    placeholder="请输入简介"
+                                    placeholder="请输入简介,备注信息不能超过1000"
                                     v-model="form.summary"
                             >
                             </el-input>
